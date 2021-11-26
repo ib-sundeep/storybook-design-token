@@ -1,14 +1,8 @@
-const tokenContext = require.context(
-  '!!raw-loader!..',
-  true,
-  /.\.(css|less|scss|svg)$/
-);
+const tokenContext = require.context('..?raw', true, /.\.(css|less|scss|svg)$/);
 
 const tokenFiles = tokenContext.keys().map(function (filename) {
-  return { filename: filename, content: tokenContext(filename).default };
+  return { filename: filename, content: tokenContext(filename) };
 });
-
-console.log(tokenFiles);
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
