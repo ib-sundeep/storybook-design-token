@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "addon",
-    "demo"
+    "demo",
+    "demo-webpack5"
   ],
   "resolutions": {
     "hosted-git-info": "2.8.9",
